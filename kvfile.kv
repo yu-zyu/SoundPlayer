@@ -1,0 +1,116 @@
+# File name: test.py
+ 
+
+
+<Button>:
+    font_size:  25
+    color:  0,1,0,1
+    size_hint: 0.2, 0.1
+
+<FloatLayout>:
+    Button:
+        text: "音声再生"
+        pos_hint: {"x":0}
+        on_press: root.sounds()
+
+    Button:
+        text: "台本"
+        pos_hint: {"right":1}
+        on_press: root.script()
+
+    Button:
+        text: "翻訳"
+        pos_hint: {"right":1,"y" :0.1}
+        on_press: root.script2()
+
+    Button:
+        text: "← 前へ"
+        pos_hint: {"x":0, "top":1}
+        on_press: root.Previous()
+
+    Button:
+        text: "次へ →"
+        pos_hint: {"right":1,"top":1}
+        on_press: root.next()
+
+    Button:
+        text: "ピッチ上げ↑"
+        pos_hint: {"x":0,"top":0.3}
+        on_press: root.PitchP()
+
+    Button:
+        text: "ピッチ下げ↓"
+        pos_hint: {"x":0,"top":0.2}
+        on_press: root.PitchM()
+
+    Button:
+        text: "音量上げ↑"
+        pos_hint: {"x":0.2,"top":0.1}
+        on_press: root.VolumeP()
+
+    Button:
+        text: "音量下げ↓"
+        pos_hint: {"x":0.4,"top":0.1}
+        on_press: root.VolumeM()
+
+    Button:
+        text: "お決まり\nフレーズ"
+        pos_hint: {"x":0.2,"top":1}
+        on_press: root.Change(0)
+
+    Button:
+        text: "便利動詞"
+        pos_hint: {"x":0.4,"top":1}
+        on_press: root.Change(1)
+
+    Button:
+        text: "質問"
+        pos_hint: {"x":0.6,"top":1}
+        on_press: root.Change(2)
+
+    Button:
+        text: "気持ち表現"
+        pos_hint: {"x":0.2,"top":0.9}
+        on_press: root.Change(3)
+
+    Button:
+        text: "話し始め"
+        pos_hint: {"x":0.4,"top":0.9}
+        on_press: root.Change(4)
+
+    Button:
+        text: "状況説明"
+        pos_hint: {"x":0.6,"top":0.9}
+        on_press: root.Change(5)
+
+    Button:
+        text: "頻出文法"
+        pos_hint: {"x":0.2,"top":0.8}
+        on_press: root.Change(6)
+
+    Button:
+        text: "同意"
+        pos_hint: {"x":0.4,"top":0.8}
+        on_press: root.Change(7)
+
+
+    Label:
+        id: LB
+        text: ""
+
+    Label:
+        id: LB2
+        text: ""
+
+<Widgets>:
+    Button:
+        size:   100,75
+        pos:    root.x, root.top - self.height
+        text:   "Kivy"
+        color:  0,1,0,1
+        on_press: root.script()
+    Button:
+        size:   300,75
+        pos:    100,0
+        text:   "2kome Botan"
+        color:  1,0,0,1
